@@ -1,0 +1,7 @@
+.Hero{
+    height: 100vh;
+    background: linear-gradient(180deg,#fde1ff,#1effea22 60%);
+}
+.bye{
+    mix-blend-mode: color-burn;
+}

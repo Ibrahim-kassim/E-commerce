@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import Logo from "../../assets/shop.jpg";
+import Logo from "../../assets/logo.png";
 import { FaCartShopping } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
@@ -21,8 +21,8 @@ const Navbar = () => {
   return (
     <div className="relative ">
       <div className=" flex flex-row items-center justify-between px-4 py-4 md:px-12 md:h-24 border-b-2 shadow-md">
-        <div className="flex items-center justify-center">
-          <img src={Logo} alt="" className="md:h-12 md:w-32 h-12 w-12" />
+        <div className="flex items-center justify-center gap-4">
+          <img src={Logo} alt="" className="" />
           <h1 className="text-2xl">Shopper</h1>
         </div>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
               selectedItem === "Shop" ? "font-bold" : ""
             }`}
           >
-            Shop {selectedItem === "Shop" && <hr className="hr" />}
+            Shop {selectedItem === "Shop" && <hr className="hre" />}
           </Link>
           <Link
             to={"/mens"}
@@ -50,7 +50,7 @@ const Navbar = () => {
               selectedItem === "Men" ? "font-bold" : ""
             }`}
           >
-            Men {selectedItem === "Men" && <hr className="hr" />}
+            Men {selectedItem === "Men" && <hr className="hre" />}
           </Link>
           <Link
             to={"/womens"}
@@ -59,7 +59,7 @@ const Navbar = () => {
               selectedItem === "Women" ? "font-bold" : ""
             }`}
           >
-            Women {selectedItem === "Women" && <hr className="hr" />}
+            Women {selectedItem === "Women" && <hr className="hre" />}
           </Link>
           <Link
             to={"/kids"}
@@ -68,7 +68,7 @@ const Navbar = () => {
               selectedItem === "Kids" ? "font-bold" : ""
             }`}
           >
-            Kids {selectedItem === "Kids" && <hr className="hr" />}
+            Kids {selectedItem === "Kids" && <hr className="hre" />}
           </Link>
         </ul>
 

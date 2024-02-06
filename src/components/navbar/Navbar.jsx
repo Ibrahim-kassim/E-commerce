@@ -89,10 +89,10 @@ const Navbar = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex flex-col justify-center items-center">
           <IoMdClose
             onClick={handleToggleMenu}
-            className="absolute top-8 right-8 hover:text-white ease-out duration-300 cursor-pointer z-50"
+            className="absolute top-8 right-8  hover:text-white ease-out duration-300 cursor-pointer z-50"
             size={40}
           />
-          <div className="bg-white w-[60%] h-[70%] relative">
+          <div className="bg-white shadow-2xl rounded-md px-4 w-[60%] h-[70%] relative">
             <div className="w-full h-full flex flex-col items-center py-8 gap-4">
               <Link
                 onClick={handleToggleMenu}

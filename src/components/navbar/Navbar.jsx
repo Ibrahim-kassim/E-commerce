@@ -74,7 +74,7 @@ const Navbar = () => {
 
         <div className="lg:flex items-center justify-center px-8 gap-4 hidden">
           <Link to={"/login"}>
-            <button className="px-4 py-2 rounded-full border hover:bg-slate-200 cursor-pointer duration-300 ease-in-out transition">
+            <button className="px-4 py-2 rounded-full border hover:bg-[#C25A37] hover:text-white cursor-pointer duration-300 ease-in-out transition">
               Login
             </button>
           </Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
                 <Link to={"/login"}>
                   <button
                     onClick={handleToggleMenu}
-                  className="px-4 py-2 rounded-full border hover:bg-orange-400 hover:text-white cursor-pointer duration-300 ease-in-out transition">
+                  className="px-4 py-2 rounded-full border hover:bg-[#C25A37] hover:text-white cursor-pointer duration-300 ease-in-out transition">
                     Login
                   </button>
                 </Link>

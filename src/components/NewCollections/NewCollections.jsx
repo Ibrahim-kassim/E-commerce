@@ -5,12 +5,12 @@ import new_collections from '../../assets/new_collections';
 
 const NewCollections = () => {
   return (
-    <div className='popular py-8 px-4 flex flex-col items-center justify-center'>
-      <h1 className='text-4xl py-7'>New Collection</h1>
-      <hr className='hr mb-8' />
-      <div className='w-full max-w-screen-xl px-8 gap-12 flex flex-wrap justify-center'>
+    <div className=' py-8 px-4 flex flex-col items-center justify-center w-full'>
+      <h1 className='text-4xl md::py-7 pt-28 '>New Collection</h1>
+      <hr className='hr mb-8 mt-2' />
+      <div className='grid grid-cols-1  sm:grid-cols-2 w-full   p-4 lg:grid-cols-4 gap-4 items-center justify-center'>
         {new_collections.map((item, i) => (
-          <div key={i} className='w-full sm:w-1/2 md:w-1/2 lg:w-1/4'>
+          <div className=' items-center flex justify-center' key={i}>
             <Item
               id={item.id}
               name={item.name}

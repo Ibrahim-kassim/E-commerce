@@ -4,7 +4,7 @@ import "./Offers.css"
 
 const Offers = () => {
   return (
-    <div className="offers py-12 px-4 lg:px-24 w-full min-h-screen">
+    <div className="offers pt-12 px-4 lg:px-24 w-full   ">
       <div className="px-4 lg:px-28 py-16 gradiant flex flex-col lg:flex-row items-center justify-between h-[60vh]">
         <div className="flex flex-col items-center lg:items-start justify-center lg:justify-start text-center lg:text-left">
           <div className="text-4xl lg:text-[80px] font-bold">Exclusive</div>

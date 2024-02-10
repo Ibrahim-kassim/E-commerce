@@ -5,7 +5,7 @@ const Item = (props) => {
   return (
     <div className="w-[250px] item">
       <Link to={`/product/${props.id}`} >
-        <img src={props.image} alt="" />
+        <img onClick={window.scrollTo(0,0)} src={props.image} alt="" />
       </Link>
       <p className="mt-2 text-sm">{props.name}</p>
       <div className="flex gap-4">

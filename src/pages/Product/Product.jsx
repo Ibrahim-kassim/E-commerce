@@ -4,7 +4,10 @@ import { shopContext } from "../../contexts/shopContext";
 import arrow_icon from "../../assets/breadcrum_arrow.png";
 import star_icon from "../../assets/star_icon.png";
 import star_dull_icon from "../../assets/star_dull_icon.png";
+import Footer from "../../components/footer/Footer"
 import "./Product.css";
+import DiscriptionProduct from "../../components/DescriptionProduct/DiscriptionProduct";
+import RelatedProducts from "../../components/RelatedProducts/RelatedProducts";
 
 const Product = () => {
   const { all_product } = useContext(shopContext);
@@ -18,7 +21,7 @@ const Product = () => {
   }
 
   return (
-    <div className="product px-4 sm:px-16 py-12 h-screen">
+    <div className="product px-4 sm:px-16 py-12 h-screen ">
       <div className="main flex flex-col items-start justify-between">
         <div className="breadCrum flex items-center justify-start flex-wrap">
           <span>Home</span>
@@ -130,6 +133,17 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <div>
+        <DiscriptionProduct/>
+      </div>
+      <div>
+        <RelatedProducts/>
+      </div>
+      <div className="pt-20">
+      <Footer/>
+
+      </div>
+     
     </div>
   );
 };

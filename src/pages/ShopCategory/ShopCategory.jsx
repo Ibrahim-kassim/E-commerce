@@ -33,7 +33,7 @@ const ShopCategory = (props) => {
   }
 
   return (
-    <div>
+    <div className="bb">
       <div className="shop px-4 sm:px-8 md:px-16 lg:px-24 py-4 gap-4 flex flex-col justify-center items-center">
         <img src={props.banner} alt="Banner" />
         <div className="flex items-center justify-between px-2 py-4 w-full">

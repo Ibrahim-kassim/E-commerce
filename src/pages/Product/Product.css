@@ -1,0 +1,39 @@
+.btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 0px 1px 11px #ff0015;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 27px;
+    background: #e61c55;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    cursor: pointer; 
+    transition: all;
+    opacity: 0; /* Initially hide the breadcrumbs */
+   
+  }
+  
+  .btn:hover {
+    background: #5e3434;
+    background-image: -webkit-linear-gradient(top, #5e3434, #5c6927);
+    background-image: -moz-linear-gradient(top, #5e3434, #5c6927);
+    background-image: -ms-linear-gradient(top, #5e3434, #5c6927);
+    background-image: -o-linear-gradient(top, #5e3434, #5c6927);
+    background-image: linear-gradient(to bottom, #5e3434, #5c6927);
+    text-decoration: none;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .bb{
+    animation-name: fadeIn; /* Name of the animation */
+    animation-duration: 1s; /* Duration of the animation */
+    animation-fill-mode: forwards; 
+  }

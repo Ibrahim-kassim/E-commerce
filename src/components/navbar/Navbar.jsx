@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // Add import statement for useEffect
 import "./Navbar.css";
 import Logo from "../../assets/logo.png";
 import { FaCartShopping } from "react-icons/fa6";
@@ -10,17 +10,25 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Shop");
 
+  useEffect(() => {
+    const storedItem = localStorage.getItem("selectedItem");
+    if (storedItem) {
+      setSelectedItem(storedItem);
+    }
+  }, []);
+
   const handleToggleMenu = () => {
     setOpenMenu(!openMenu);
   };
 
   const handleMenuItemClick = (item) => {
     setSelectedItem(item);
+    localStorage.setItem("selectedItem", item);
   };
 
   return (
-    <div className="relative ">
-      <div className=" flex flex-row items-center justify-between px-4 py-4 md:px-12 md:h-24 border-b-2 shadow-md">
+    <div className="relative">
+      <div className="flex flex-row items-center justify-between px-4 py-4 md:px-12 md:h-24 border-b-2 shadow-md">
         <div className="flex items-center justify-center gap-4">
           <img src={Logo} alt="" className="" />
           <h1 className="text-2xl">Shopper</h1>
@@ -134,7 +142,8 @@ const Navbar = () => {
                 <Link to={"/login"}>
                   <button
                     onClick={handleToggleMenu}
-                  className="px-4 py-2 rounded-full border hover:bg-[#C25A37] hover:text-white cursor-pointer duration-300 ease-in-out transition">
+                    className="px-4 py-2 rounded-full border hover:bg-[#C25A37] hover:text-white cursor-pointer duration-300 ease-in-out transition"
+                  >
                     Login
                   </button>
                 </Link>

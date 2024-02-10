@@ -8,7 +8,7 @@ import Footer from '../../components/footer/Footer'
 
 const Shop = () => {
   return (
-    <div>
+    <div className='bb'>
       <Hero/>
       <Popular/> 
       <Offers/>

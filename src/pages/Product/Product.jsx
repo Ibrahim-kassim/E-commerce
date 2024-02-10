@@ -117,7 +117,7 @@ const Product = () => {
                   </div>
                 </div>
 
-                <div className="btn w-[250px] flex items-center justify-center">
+                <div className=" btn w-[250px] flex items-center justify-center">
                   Add To Cart
                 </div>
                 <p className="py-6">

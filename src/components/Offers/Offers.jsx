@@ -4,7 +4,10 @@ import "./Offers.css"
 
 const Offers = () => {
   return (
-    <div className="offers pt-12 px-4 lg:px-24 w-full   ">
+    <div
+    data-aos='fade-up' data-aos-offset='200' data-aos-delay='50' data-aos-duration='1000' data-aos-easing='ease-in-out'
+    
+    className="offers pt-12 px-4 lg:px-24 w-full   ">
       <div className="px-4 lg:px-28 py-16 gradiant flex flex-col lg:flex-row items-center justify-between h-[60vh]">
         <div className="flex flex-col items-center lg:items-start justify-center lg:justify-start text-center lg:text-left">
           <div className="text-4xl lg:text-[80px] font-bold">Exclusive</div>

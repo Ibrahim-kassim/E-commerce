@@ -4,7 +4,9 @@ import { FaInstagram, FaShopify, FaWhatsapp } from "react-icons/fa";
 import "./Footer.css";
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center  h-[50vh] gradiant px-16 justify-between py-12 m-auto">
+    <div
+    data-aos='fade-up' data-aos-offset='200' data-aos-delay='50' data-aos-duration='1000' data-aos-easing='ease-in-out'
+    className="flex flex-col items-center  h-[50vh] gradiant px-16 justify-between py-12 m-auto">
       <div className="flex items-center justify-center gap-4   py-2 px-4">
         <img src={Logo} alt="" />
         <h1 className="text-2xl font-bold">SHOPPER</h1>

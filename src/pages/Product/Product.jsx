@@ -10,7 +10,7 @@ import DiscriptionProduct from "../../components/DescriptionProduct/DiscriptionP
 import RelatedProducts from "../../components/RelatedProducts/RelatedProducts";
 
 const Product = () => {
-  const { all_product } = useContext(shopContext);
+  const { all_product,addToCart } = useContext(shopContext);
   const { productId } = useParams();
 
 
@@ -117,7 +117,7 @@ const Product = () => {
                   </div>
                 </div>
 
-                <div className=" btn w-[250px] flex items-center justify-center">
+                <div onClick={()=>{addToCart(product.id)}} className=" btn w-[250px] flex items-center justify-center">
                   Add To Cart
                 </div>
                 <p className="py-6">

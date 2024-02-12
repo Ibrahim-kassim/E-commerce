@@ -15,16 +15,12 @@ const ShopCategory = (props) => {
 
   const startItemIndex = 1;
   const endItemIndex = Math.min(startItemIndex + 11, itemCount);
-
-  // State to manage the selected sorting option
   const [sortBy, setSortBy] = useState("default");
 
-  // Function to handle sorting change
   const handleSortChange = (e) => {
     setSortBy(e.target.value);
   };
 
-  // Function to sort the products based on the selected option
   const sortedProducts = [...filteredProducts];
   if (sortBy === "priceLowToHigh") {
     sortedProducts.sort((a, b) => a.new_price - b.new_price);
@@ -33,9 +29,11 @@ const ShopCategory = (props) => {
   }
 
   return (
-    <div className="bb">
+    <div className="bb" >
       <div className="shop px-4 sm:px-8 md:px-16 lg:px-24 py-4 gap-4 flex flex-col justify-center items-center">
-        <img src={props.banner} alt="Banner" />
+        <img
+        
+         src={props.banner} alt="Banner" />
         <div className="flex items-center justify-between px-2 py-4 w-full">
           <p className="flex items-center justify-center gap-2">
             <span className="font-bold md:text-2xl">
@@ -56,7 +54,10 @@ const ShopCategory = (props) => {
             </select>
           </div>
         </div>
-        <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-center justify-center p-4">
+        <div
+        
+        
+         className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-center justify-center p-4">
           {sortedProducts
             .slice(startItemIndex - 1, endItemIndex)
             .map((item) => (

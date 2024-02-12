@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react"; // Add import statement for useEffect
+import React, { useState, useEffect, useContext } from "react"; // Add import statement for useEffect
 import "./Navbar.css";
 import Logo from "../../assets/logo.png";
 import { FaCartShopping } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { shopContext } from "../../contexts/shopContext";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Shop");
+  const { getTotalCartItems } = useContext(shopContext);
 
   useEffect(() => {
     const storedItem = localStorage.getItem("selectedItem");
@@ -87,8 +89,11 @@ const Navbar = () => {
             </button>
           </Link>
 
-          <Link to={"/cart"}>
-            <FaCartShopping />
+          <Link className="relative" to="/cart">
+            <FaCartShopping size={25} />
+            <div className="absolute top-[-50%] right-[-50%] bg-red-500 rounded-full text-white flex items-center justify-center w-5 h-5">
+              {getTotalCartItems()}
+            </div>
           </Link>
         </div>
       </div>
@@ -131,13 +136,14 @@ const Navbar = () => {
                 Kids
               </Link>
               <div className="absolute bottom-2 right-2 flex items-center gap-4">
-                <Link to={"/cart"}>
-                  <FaCartShopping
-                    onClick={handleToggleMenu}
-                    className="z-50 cursor-pointer hover:border-2 duration-300 ease-out trasnsition"
-                    size={20}
-                    color="orange"
-                  />
+                <Link
+                 className="relative"
+                  to="/cart"
+                  onClick={handleToggleMenu}>
+                  <FaCartShopping size={25} />
+                  <div className="absolute top-[-50%] right-[-50%] bg-red-500 rounded-full text-white flex items-center justify-center w-5 h-5">
+                    {getTotalCartItems()}
+                  </div>
                 </Link>
                 <Link to={"/login"}>
                   <button
